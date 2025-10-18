@@ -1,6 +1,7 @@
 const fetchProducts = async () => {
   try {
-    const response = await fetch('../db.json');
+  const response = await fetch('/db.json');
+
 
     const result = await response.json();
 
