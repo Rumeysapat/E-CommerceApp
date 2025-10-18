@@ -25,10 +25,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderCartQuantity(cart);
 
   //Eger anasayfa da isem
-  if (window.location.pathname.includes('/index.html')) {
-    //tum veriler db den okudu
-    const products = await fetchProducts();
-    console.log('products ', products);
+ if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+  const products = await fetchProducts();
+  console.log('products ', products);
+}
+
 
     //alinan urunleri render et
     renderProduct(products, (e) => {
