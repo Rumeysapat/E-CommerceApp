@@ -24,11 +24,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   //Header daki toplam iconu guncelle
   renderCartQuantity(cart);
 
-  //Eger anasayfa da isem
- if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-  const products = await fetchProducts();
-  console.log('products ', products);
-}
+const products = await fetchProducts();
+console.log('products ', products);
+
 
 
     //alinan urunleri render et
